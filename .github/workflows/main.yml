@@ -17,7 +17,7 @@ jobs:
        uses: actions/checkout@v2
 
      - name: build
-        run: |
+       run: |
           COMPILER=$(root-config --cxx)
           FLAGS=$(root-config --cflags --libs)
           $COMPILER -g -O3 -Wall -Wextra -Wpedantic -o skim skim.cxx $FLAGS
